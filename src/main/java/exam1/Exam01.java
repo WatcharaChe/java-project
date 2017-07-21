@@ -49,6 +49,12 @@ public class Exam01 {
         }else if (scorePlayerB == 50){
             score = "Win for Player B";
         }
+        else if( scorePlayerA == 45){
+            score = "Advantage Player A";
+        }
+        else if (scorePlayerB == 45){
+            score = "Advantage Player B";
+        }
         else if (scorePlayerA == scorePlayerB) {
             switch (scorePlayerA) {
                 case 15:
@@ -71,7 +77,7 @@ public class Exam01 {
             return score;
         }
         else{
-            score = n2s(scorePlayerA) + "-" + n2s(scorePlayerB);
+                score = n2s(scorePlayerA) + "-" + n2s(scorePlayerB);
         }
 
 
