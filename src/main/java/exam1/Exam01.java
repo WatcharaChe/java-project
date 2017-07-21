@@ -29,7 +29,24 @@ public class Exam01 {
 
     public String getScore() {
         String score = "";
+        if(scorePlayerA == scorePlayerB){
+            switch (scorePlayerA) {
+                case 15:
+                    score = "Fifteen-All";
+                    break;
+                case 30:
+                    score = "Thirty-All";
+                    break;
+                case 40:
+                    score = "Forty-Love";
+                    break;
+                case 50:
+                    score = "Win for Player A";
+                    break;
+            }
 
+            return score;
+        }
         if (whoGetPoint.equals("A")) {
             switch (scorePlayerA) {
                 case 15:
@@ -63,6 +80,7 @@ public class Exam01 {
         } else {
             score = "Love-All";
         }
+
 
 
         return score;
