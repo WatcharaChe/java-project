@@ -20,6 +20,9 @@ public class Exam01 {
             case 15:
                 score = "Fifteen-Love";
                 break;
+            case 30:
+                score = "Thirty-Love";
+                break;
             default:
                 score = "Love-All";
         }
