@@ -57,7 +57,7 @@ public class Exam01 {
                     score = "Love-Forty";
                     break;
                 case 50:
-                    score = "Win for Player A";
+                    score = "Win for Player B";
                     break;
             }
         } else {
