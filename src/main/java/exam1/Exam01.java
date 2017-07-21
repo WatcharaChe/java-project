@@ -56,8 +56,15 @@ public class Exam01 {
                 case 50:
                     score = "Win for Player A";
                     break;
+                case 0:
+                    score = "Love-All";
+                    break;
             }
 
+            return score;
+        }
+        else if (scorePlayerA > scorePlayerB && scorePlayerA != 0 && scorePlayerB != 0){
+            score = n2s(scorePlayerA) + "-" + n2s(scorePlayerB);
             return score;
         }
         if (whoGetPoint.equals("A")) {
@@ -96,6 +103,21 @@ public class Exam01 {
 
 
         return score;
+    }
+    private String n2s(int number){
+        String ans = "";
+        switch (number) {
+            case 15:
+                ans = "Fifteen";
+                break;
+            case 30:
+                ans = "Thirty";
+                break;
+            case 40:
+                ans = "Forty";
+                break;
+        }
+        return ans;
     }
 
 }
