@@ -54,7 +54,7 @@ public class Exam01 {
                     score = "Love-Thirty";
                     break;
                 case 40:
-                    score = "Forty-Love";
+                    score = "Love-Forty";
                     break;
                 case 50:
                     score = "Win for Player A";
