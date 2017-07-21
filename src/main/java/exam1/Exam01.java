@@ -13,6 +13,7 @@ public class Exam01 {
         int point = 15;
         if(scorePlayerB == 45 && scorePlayerA == 40){
             scorePlayerB -= 5;
+            whoGetPoint = "";
             return;
         }else
         if (scorePlayerA == 40 && scorePlayerB == 40) {
@@ -29,6 +30,7 @@ public class Exam01 {
         int point = 15;
         if(scorePlayerA == 45 && scorePlayerB == 40){
             scorePlayerA -= 5;
+            whoGetPoint = "";
             return;
         }
         else if (scorePlayerA == 40 && scorePlayerB == 40) {
@@ -42,7 +44,12 @@ public class Exam01 {
 
     public String getScore() {
         String score = "";
-        if (scorePlayerA == scorePlayerB) {
+        if(scorePlayerA == 50){
+            score = "Win for Player A";
+        }else if (scorePlayerB == 50){
+            score = "Win for Player B";
+        }
+        else if (scorePlayerA == scorePlayerB) {
             switch (scorePlayerA) {
                 case 15:
                     score = "Fifteen-All";
@@ -63,11 +70,12 @@ public class Exam01 {
 
             return score;
         }
-        else if (scorePlayerA != 0 && scorePlayerB != 0){
+        else{
             score = n2s(scorePlayerA) + "-" + n2s(scorePlayerB);
-            return score;
         }
-        if (whoGetPoint.equals("A")) {
+
+
+        if(whoGetPoint.equals("A") && scorePlayerB == 0) {
             switch (scorePlayerA) {
                 case 15:
                     score = "Fifteen-Love";
@@ -82,7 +90,7 @@ public class Exam01 {
                     score = "Win for Player A";
                     break;
             }
-        } else if (whoGetPoint.equals("B")) {
+        } else if (whoGetPoint.equals("B") &&scorePlayerA == 0) {
             switch (scorePlayerB) {
                 case 15:
                     score = "Love-Fifteen";
@@ -97,8 +105,6 @@ public class Exam01 {
                     score = "Win for Player B";
                     break;
             }
-        } else {
-            score = "Love-All";
         }
 
 
