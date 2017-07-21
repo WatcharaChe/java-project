@@ -11,6 +11,9 @@ public class Exam01 {
 
     public void playerAWin() {
         int point = 15;
+        if(scorePlayerA == 45){
+            point = 5;
+        }else
         if(scorePlayerB == 45 && scorePlayerA == 40){
             scorePlayerB -= 5;
             whoGetPoint = "";
@@ -28,6 +31,9 @@ public class Exam01 {
 
     public void playerBWin() {
         int point = 15;
+        if(scorePlayerB == 45){
+            point = 5;
+        }else
         if(scorePlayerA == 45 && scorePlayerB == 40){
             scorePlayerA -= 5;
             whoGetPoint = "";
