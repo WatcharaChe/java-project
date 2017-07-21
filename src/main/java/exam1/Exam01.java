@@ -73,17 +73,13 @@ public class Exam01 {
                 score = "Advantage " + mSecondPerson;
             } else if (scorePlayerA == scorePlayerB) {
                 switch (scorePlayerA) {
+                    case 0:
                     case 15:
-                        score = "Fifteen-All";
-                        break;
                     case 30:
-                        score = "Thirty-All";
+                        score = convertNumber2String(scorePlayerA) + "-All";
                         break;
                     case 40:
                         score = "Deuce";
-                        break;
-                    case 0:
-                        score = "Love-All";
                         break;
                 }
             } else if (scorePlayerA != 0 && scorePlayerB != 0) {
@@ -102,6 +98,9 @@ public class Exam01 {
     private String convertNumber2String(int number) {
         String ans = "";
         switch (number) {
+            case 0:
+                ans = "Love";
+                break;
             case 15:
                 ans = "Fifteen";
                 break;
