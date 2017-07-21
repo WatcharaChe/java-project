@@ -50,6 +50,15 @@ public class Exam01 {
                 case 15:
                     score = "Love-Fifteen";
                     break;
+                case 30:
+                    score = "Love-Thirty";
+                    break;
+                case 40:
+                    score = "Forty-Love";
+                    break;
+                case 50:
+                    score = "Win for Player A";
+                    break;
             }
         } else {
             score = "Love-All";
