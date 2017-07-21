@@ -63,7 +63,7 @@ public class Exam01 {
 
             return score;
         }
-        else if (scorePlayerA > scorePlayerB && scorePlayerA != 0 && scorePlayerB != 0){
+        else if (scorePlayerA != 0 && scorePlayerB != 0){
             score = n2s(scorePlayerA) + "-" + n2s(scorePlayerB);
             return score;
         }
