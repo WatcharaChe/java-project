@@ -17,8 +17,11 @@ public class Exam01 {
 
     public void playerAWin() {
         int point = 15;
-        if (deuce.equals("A")) {
+        if (game != null)
+            return;
+        else if (deuce.equals("A")) {
             game = mFirstPerson;
+            return;
         } else if (deuce.equals("B")) {
             deuce = "";
             whoGetPoint = "";
@@ -28,8 +31,10 @@ public class Exam01 {
                 deuce = "A";
                 whoGetPoint = "A";
                 return;
-            } else
+            } else {
                 game = mFirstPerson;
+                return;
+            }
         } else if (scorePlayerA == 30) {
             point = 10;
         }
@@ -40,8 +45,11 @@ public class Exam01 {
 
     public void playerBWin() {
         int point = 15;
-        if (deuce.equals("B")) {
+        if (game != null)
+            return;
+        else if (deuce.equals("B")) {
             game = mSecondPerson;
+            return;
         } else if (deuce.equals("A")) {
             deuce = "";
             whoGetPoint = "";
@@ -51,8 +59,10 @@ public class Exam01 {
                 deuce = "B";
                 whoGetPoint = "B";
                 return;
-            } else
+            } else {
                 game = mSecondPerson;
+                return;
+            }
         } else if (scorePlayerB == 30) {
             point = 10;
         }

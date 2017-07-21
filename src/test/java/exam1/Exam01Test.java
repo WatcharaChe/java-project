@@ -392,4 +392,21 @@ public class Exam01Test {
         assertEquals("Win for Player B", actualResult);
     }
 
+    @Test
+    public void NewTestCase2() {
+        exam01.playerAWin();
+        exam01.playerAWin();
+        exam01.playerAWin();
+        exam01.playerAWin();
+        exam01.playerBWin();
+        exam01.playerBWin();
+        exam01.playerBWin();
+        exam01.playerBWin();
+        exam01.playerBWin();
+        exam01.playerBWin();
+        exam01.playerBWin();
+        String actualResult = exam01.getScore();
+        assertEquals("Win for Player A", actualResult);
+    }
+
 }
