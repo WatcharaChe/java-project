@@ -9,7 +9,7 @@ public class Exam01 {
 
     public void playerAWin() {
         int point = 15;
-        if (socrePlayerA == 30) {
+        if (socrePlayerA >= 30) {
             point = 10;
         }
         socrePlayerA += point;
@@ -29,6 +29,9 @@ public class Exam01 {
                 break;
             case 40:
                 score = "Forty-Love";
+                break;
+            case 50:
+                score = "Win for Player A";
                 break;
             default:
                 score = "Love-All";
