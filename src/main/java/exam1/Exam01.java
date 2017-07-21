@@ -11,16 +11,29 @@ public class Exam01 {
 
     public void playerAWin() {
         int point = 15;
-        if (scorePlayerA >= 30) {
+        if(scorePlayerB == 45 && scorePlayerA == 40){
+            scorePlayerB -= 5;
+            return;
+        }else
+        if (scorePlayerA == 40 && scorePlayerB == 40) {
+            point = 5;
+        } else if (scorePlayerA >= 30) {
             point = 10;
         }
+
         scorePlayerA += point;
         whoGetPoint = "A";
     }
 
     public void playerBWin() {
         int point = 15;
-        if (scorePlayerB >= 30) {
+        if(scorePlayerA == 45 && scorePlayerB == 40){
+            scorePlayerA -= 5;
+            return;
+        }
+        else if (scorePlayerA == 40 && scorePlayerB == 40) {
+            point = 5;
+        } else if (scorePlayerB >= 30) {
             point = 10;
         }
         scorePlayerB += point;
@@ -29,7 +42,7 @@ public class Exam01 {
 
     public String getScore() {
         String score = "";
-        if(scorePlayerA == scorePlayerB){
+        if (scorePlayerA == scorePlayerB) {
             switch (scorePlayerA) {
                 case 15:
                     score = "Fifteen-All";
@@ -80,7 +93,6 @@ public class Exam01 {
         } else {
             score = "Love-All";
         }
-
 
 
         return score;
